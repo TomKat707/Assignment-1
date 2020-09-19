@@ -50,6 +50,8 @@ public class LevelGenerator : MonoBehaviour
     public Sprite powerPellet; //6 in array
     public Sprite wall7;
 
+    SpriteRenderer powerPelletRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +76,7 @@ public class LevelGenerator : MonoBehaviour
     {
         
     }
+    
 
     private void generateTile(int c, int r, int tileNumber)
     {
@@ -277,6 +280,7 @@ public class LevelGenerator : MonoBehaviour
                 break;
 
             case 6:
+                test.AddComponent<PowerPelletBlink>();
                 renderer.sprite = powerPellet;
                 break;
 
