@@ -123,22 +123,46 @@ public class LevelGenerator : MonoBehaviour
                 renderer.sprite = wall3;
                 test.transform.localScale = new Vector3(3.2f, 3.2f, 1f);
 
-                if ((levelMap[r, c + 1] == 4) && (levelMap[r - 1, c] == 4))
+                if ( ((levelMap[r, c + 1] == 4) || (levelMap[r, c + 1] == 3)) && ((levelMap[r - 1, c] == 4) || (levelMap[r - 1, c] == 3)))
                 {
                     test.transform.Rotate(0f, 0f, 0f);
                 }
-                else if ((levelMap[r, c - 1] == 4) && (levelMap[r - 1, c] == 4))
+                else if (((levelMap[r, c - 1] == 4) || (levelMap[r, c - 1] == 3)) && ((levelMap[r - 1, c] == 4) || (levelMap[r - 1, c] == 3)))
                 {
                     test.transform.Rotate(0f, 0f, -90f);
                 }
-                else if ((levelMap[r, c - 1] == 4) && (levelMap[r + 1, c] == 4))
+                else if (((levelMap[r, c - 1] == 4) || (levelMap[r, c - 1] == 3)) && ((levelMap[r + 1, c] == 4) || (levelMap[r + 1, c] == 3)))
                 {
                     test.transform.Rotate(0f, 0f, -180f);
                 }
-                else if ((levelMap[r, c + 1] == 4) && (levelMap[r + 1, c] == 4))
+                else if (((levelMap[r, c + 1] == 4) || (levelMap[r, c + 1] == 3)) &&  ((levelMap[r + 1, c] == 4) || (levelMap[r + 1, c] == 3))) 
                 {
                     test.transform.Rotate(0f, 0f, -270f);
                 }
+
+                if (test.transform.position == new Vector3(14f, 22f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(9f, 10f, 0f))
+                    test.transform.Rotate(0f, 0f, -270f);
+                if (test.transform.position == new Vector3(14f, 8f, 0f))
+                    test.transform.Rotate(0f, 0f, -180f);
+                if (test.transform.position == new Vector3(15f, 8f, 0f))
+                    test.transform.Rotate(0f, 0f, -270f);
+                if (test.transform.position == new Vector3(9f, 20f, 0f))
+                    test.transform.Rotate(0f, 0f, -270f);
+                if (test.transform.position == new Vector3(20f, 20f, 0f))
+                    test.transform.Rotate(0f, 0f, -180f);
+                if (test.transform.position == new Vector3(20f, 19f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(9f, 11f, 0f))
+                    test.transform.Rotate(0f, 0f, -270f);
+                if (test.transform.position == new Vector3(9f, 10f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(20f, 11f, 0f))
+                    test.transform.Rotate(0f, 0f, -180f);
+                if (test.transform.position == new Vector3(20f, 10f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+
                 break;
 
             case 4:
@@ -161,6 +185,91 @@ public class LevelGenerator : MonoBehaviour
                 {
                     test.transform.Rotate(0f, 0f, 0f);
                 }
+
+                if (test.transform.position == new Vector3(14f, 28f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(15f, 28f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(14f, 27f, 0f))
+                    test.transform.Rotate(0f, 0f, 0f);
+                if (test.transform.position == new Vector3(15f, 26f, 0f))
+                    test.transform.Rotate(0f, 0f, -270f);
+                if (test.transform.position == new Vector3(14f, 26f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(8f, 22f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(9f, 22f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(20f, 22f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(21f, 22f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(9f, 21f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(14f, 21f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(15f, 21f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(20f, 21f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(14f, 20f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(15f, 20f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(9f, 18f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(20f, 18f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(8f, 17f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(9f, 17f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(20f, 17f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+                if (test.transform.position == new Vector3(21f, 17f, 0f))
+                    test.transform.Rotate(0f, 0f, -90f);
+
+                if (test.transform.position == new Vector3(8f, 13f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(9f, 13f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(20f, 13f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(21f, 13f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(9f, 12f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(20f, 12f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(14f, 10f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(15f, 10f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(9f, 9f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(14f, 9f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(15f, 9f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(20f, 9f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(8f, 8f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(9f, 8f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(20f, 8f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(21f, 8f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(14f, 4f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(15f, 4f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(14f, 2f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+                if (test.transform.position == new Vector3(15f, 2f, 0f))
+                    test.transform.Rotate(0f, 0f, 90f);
+
                 break;
 
             case 5:
