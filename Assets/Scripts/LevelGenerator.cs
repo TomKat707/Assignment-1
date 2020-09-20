@@ -52,6 +52,8 @@ public class LevelGenerator : MonoBehaviour
 
     SpriteRenderer powerPelletRenderer;
 
+    public AudioSource startUpJingle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +70,8 @@ public class LevelGenerator : MonoBehaviour
                 generateTile(c, r, number);
             }
          }
+
+        startUpJingle.Play();
          
     }
 
